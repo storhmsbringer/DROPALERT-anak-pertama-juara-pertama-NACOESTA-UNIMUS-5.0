@@ -31,7 +31,7 @@ warnings.filterwarnings("ignore")
 # 1. KONFIGURASI HALAMAN
 # ════════════════════════════════════════════════════════
 st.set_page_config(
-    page_title="DROPALERT | Deteksi Risiko Putus Sekolah",
+    page_title="DropAlert | Deteksi Risiko Putus Sekolah",
     page_icon="🚨",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -759,7 +759,7 @@ def build_dashboard():
 
     # ── Sidebar ──────────────────────────────────────────
     with st.sidebar:
-        st.markdown("<h1 style='color:#E74C3C; margin-bottom:2px;'>🚨 DROPALERT</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='color:#E74C3C; margin-bottom:2px;'>🚨 DropAlert</h1>", unsafe_allow_html=True)
         st.markdown("<p style='color:#AAA; margin-top:0; font-size:.85rem;'>Sistem Deteksi Dini Putus Sekolah</p>", unsafe_allow_html=True)
         st.markdown("---")
         menu = st.radio(
@@ -769,14 +769,7 @@ def build_dashboard():
             label_visibility="collapsed",
         )
         st.markdown("---")
-
-        # Upload dataset opsional
-        st.markdown("**Upload Dataset (opsional)**")
-        uploaded = st.file_uploader("Dataset Excel BPS", type=['xlsx', 'xls'],
-                                    label_visibility="collapsed")
-        st.markdown("---")
-        st.markdown("<div style='text-align: center; color: #888; font-size: 0.75rem; margin-top: 2rem;'>© DROPALERT 2026<br>All rights reserved.</div>", unsafe_allow_html=True)
-
+        
     # ── Load data ─────────────────────────────────────────
     dataset_path = None
     if uploaded:
@@ -816,7 +809,7 @@ def build_dashboard():
     if menu == "Beranda":
         st.markdown("""
         <div class="hero-container">
-          <h1>DROPALERT</h1>
+          <h1>DropAlert</h1>
           <h1>Pengembangan Sistem Deteksi Dini Risiko Putus Sekolah<br>Menggunakan Ensemble Learning Berbasis Dashboard Interaktif</h1>
           <p>Mendukung Intervensi Pendidikan Presisi di Era Society 5.0 · Sumber Data BPS 2021–2025</p>
         </div>
@@ -1701,10 +1694,10 @@ Partisipasi sekolah di wilayah ini tergolong sehat di semua kelompok umur. Kondi
     # E. TENTANG PROYEK
     # ════════════════════════════════════════════════════
     elif menu == "Tentang Proyek":
-        st.markdown("<h2 class='section-title'>Tentang DROPALERT</h2>",
+        st.markdown("<h2 class='section-title'>Tentang DropAlert</h2>",
                     unsafe_allow_html=True)
         st.markdown("""
-**DROPALERT** atau *School Dropout Alert* adalah sistem deteksi dini risiko putus sekolah
+**DropAlert** atau *School Dropout Alert* adalah sistem deteksi dini risiko putus sekolah
 berbasis *machine learning* yang dikembangkan untuk mendukung intervensi pendidikan
 presisi di Indonesia.
 
@@ -1755,7 +1748,7 @@ Angka Risiko Putus Sekolah (ARPS) = 100 − APS, untuk kelompok umur:
     st.markdown("""
     <div style="margin-top: 5rem; padding: 1.5rem 2rem; background: linear-gradient(90deg, #3D1010 0%, #800000 100%); border-radius: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-left: 5px solid #F39C12; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
          <div>
-            <p style="font-size: 1.2rem; font-weight: 800; color: #FFFFFF; margin: 0;">DROPALERT</p>
+            <p style="font-size: 1.2rem; font-weight: 800; color: #FFFFFF; margin: 0;">DropAlert</p>
             <p style="font-size: 0.85rem; color: #FFD5CC; margin: 0;">Sistem Deteksi Dini Risiko Putus Sekolah · Indonesia</p>
         </div>
         <div style="font-size: 0.85rem; color: #FFD5CC; text-align: right; line-height: 1.6;">

@@ -769,7 +769,8 @@ def build_dashboard():
             label_visibility="collapsed",
         )
         st.markdown("---")
-        
+        st.markdown("<div style='text-align: center; color: #888; font-size: 0.75rem; margin-top: 2rem;'>© DROPALERT 2026<br>All rights reserved.</div>", unsafe_allow_html=True)
+    
     df = load_data()
     
     # Compute clustering

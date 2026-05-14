@@ -770,15 +770,7 @@ def build_dashboard():
         )
         st.markdown("---")
         
-    # ── Load data ─────────────────────────────────────────
-    dataset_path = None
-    if uploaded:
-        import tempfile
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.xlsx') as tmp:
-            tmp.write(uploaded.read())
-            dataset_path = tmp.name
-
-    df = load_data(dataset_path)
+    df = load_data()
     
     # Compute clustering
     if df is not None:
